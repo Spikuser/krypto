@@ -1,0 +1,105 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+.header {
+    margin-bottom: 10px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 0 50px;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        color: #E5E5E5;
+        @extend %outfit-700;
+        font-size: 20px;
+        font-style: normal;
+        text-transform: uppercase;
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+    }
+
+    &__list-link {
+        color: #E5E5E5;
+        @extend %outfit-400;
+        font-style: normal;
+        font-size: 20px;
+        padding-right: 50px;
+    }
+}
+
+.discover {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    .discover__container {
+        display: flex;
+        width: 1440px;
+    }
+
+    &__info {
+        width: 530px;
+        margin-right: 70px;
+    }
+
+    &__title {
+        @extend %outfit-700;
+        font-size: 87px;
+        font-style: normal;
+        line-height: 100px;
+        text-transform: capitalize;
+        padding-bottom: 50px;
+    }
+
+    &__text {
+        @extend %roboto-400;
+        font-size: 18px;
+        font-style: normal;
+        line-height: 27.5px;
+        padding-bottom: 35px;
+    }
+
+    &__buttons {
+        @extend %outfit-600;
+        font-size: 18px;
+        line-height: 43px;
+        letter-spacing: 0.26em;
+    }
+
+    &__button-buy {
+        color: #fff;
+        background-color: #8D8DDA;
+        border: 1px solid #000;
+        border-radius: 25px;
+        padding: 17px 53px;
+        margin-right: 37px;
+        text-transform: uppercase;
+    }
+    &__button-buy:hover{
+        cursor: pointer;
+    }
+
+    &__button-sell {
+        color: #fff;
+        background-color: transparent;
+        border-radius: 25px;
+        border: 1px solid #89D0D1;
+        padding: 17px 53px;
+        text-transform: uppercase;
+    }
+    &__button-sell:hover{
+        cursor: pointer;
+    }
+
+}
+
+@import 'media';
