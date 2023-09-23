@@ -4,7 +4,9 @@
 @import 'global';
 
 .header {
+    position: relative;
     margin-bottom: 10px;
+
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -19,6 +21,22 @@
         font-size: 20px;
         font-style: normal;
         text-transform: uppercase;
+        position: relative;
+        z-index: 10;
+        
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 216px;
+        top: -347px;
+        width: 603px;
+        height: 648px;
+        background-image: url(../images/bg/Ellipse\ 1.png);
+        border-radius: 648px;
+        background: #8D8DDA;
+        filter: blur(153px);
     }
 }
 
@@ -40,7 +58,20 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-
+    margin-bottom: 130px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        right: -212px;
+        top: 104px;
+        width: 603px;
+        height: 648px;
+        background-image: url(../images/bg/Ellipse\ 2.png);
+        border-radius: 648px;
+        background: rgba(137, 208, 209, 0.64);
+        filter: blur(153px);
+    }
     .discover__container {
         display: flex;
         width: 1440px;
@@ -58,6 +89,8 @@
         line-height: 100px;
         text-transform: capitalize;
         padding-bottom: 50px;
+        position: relative;
+        z-index: 10;
     }
 
     &__text {
@@ -84,7 +117,8 @@
         margin-right: 37px;
         text-transform: uppercase;
     }
-    &__button-buy:hover{
+
+    &__button-buy:hover {
         cursor: pointer;
     }
 
@@ -96,8 +130,348 @@
         padding: 17px 53px;
         text-transform: uppercase;
     }
-    &__button-sell:hover{
+
+    &__button-sell:hover {
         cursor: pointer;
+    }
+}
+
+.featured {
+    margin-bottom: 130px;
+
+    &__title {
+        @extend %outfit-600;
+        font-size: 18px;
+        font-style: normal;
+        line-height: 43px;
+        letter-spacing: 4.68px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        margin-left: 59px;
+    }
+
+    &__companies {
+        max-width: 1065px;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #2E2761CC;
+        border-radius: 25px;
+        padding: 20px 20px;
+    }
+
+    &__company {
+        height: 30px;
+    }
+}
+
+.analytics {
+    margin-bottom: 100px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        left: -302px;
+        top: 104px;
+        width: 603px;
+        height: 648px;
+        background-image: url(../images/bg/Ellipse\ 3.png);
+        border-radius: 648px;
+        background: rgba(137, 208, 209, 0.64);
+        filter: blur(153px);
+    }
+    &__container {
+        width: 1440px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__inner {
+        max-width: 480px;
+    }
+
+    &__subtitle {
+        @extend %roboto-400;
+        font-size: 18px;
+        font-style: normal;
+        line-height: 27.5px;
+        margin-bottom: 33px;
+        margin-top: 15px;
+    }
+
+    &__title {
+        @extend %outfit-700;
+        font-size: 57px;
+        font-style: normal;
+        line-height: 65px;
+        letter-spacing: -1.14px;
+        text-transform: capitalize;
+        margin-bottom: 33px;
+    }
+
+    &__text {
+        @extend %roboto-400;
+        font-size: 18px;
+        font-style: normal;
+        line-height: 27.5px;
+        margin-bottom: 50px;
+    }
+
+    &__button {
+        padding: 10px 15px;
+        border-radius: 44px;
+        border: none;
+        background: rgba(46, 39, 97, 0.80);
+        color: #fff;
+        @extend %outfit-600;
+        font-size: 18px;
+        font-style: normal;
+        line-height: 43px;
+        letter-spacing: 4.68px;
+        text-transform: uppercase;
+    }
+
+    &__button:hover {
+        cursor: pointer;
+    }
+}
+
+.testimonials {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        left: -302px;
+        top: 280px;
+        width: 603px;
+        height: 648px;
+        background-image: url(../images/bg/Ellipse\ 4.png);
+        border-radius: 648px;
+        background: rgba(137, 208, 209, 0.64);
+        filter: blur(153px);
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        right: -199px;
+        top: -245px;
+        width: 603px;
+        height: 648px;
+        background-image: url(../images/bg/Ellipse\ 5.png);
+        border-radius: 648px;
+        background: #8D8DDA;
+        filter: blur(153px);
+    }
+    &__subtitle {
+        text-align: center;
+        color: #89D0D1;
+        @extend %outfit-600;
+        font-size: 18px;
+        line-height: 43px;
+        letter-spacing: 4.68px;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        text-align: center;
+        color: #E5E5E5;
+        @extend %outfit-700;
+        font-size: 57px;
+        font-style: normal;
+        line-height: 65px;
+        letter-spacing: -1.14px;
+        text-transform: capitalize;
+        margin-bottom: 60px;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-bottom: 100px;
+    }
+
+    &__item {
+        max-width: 345px;
+        background-color: #252155;
+        border-radius: 28px;
+        margin-right: 20px;
+        position: relative;
+    }
+
+    &__overlay {
+        position: absolute;
+        top: -50px;
+        left: 53px;
+        width: 203px;
+        height: 203px;
+        background-color: rgba(37, 33, 85, 0.4);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+
+    &__item:nth-child(3) {
+        margin-right: 0;
+    }
+
+    &__img {
+        margin-top: -50px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    &__name {
+        @extend %outfit-600;
+        font-size: 18px;
+        line-height: 43px;
+        letter-spacing: 4.68px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__text {
+        text-align: center;
+        @extend %roboto-400;
+        font-size: 16px;
+        font-style: normal;
+        line-height: normal;
+        padding: 0px 22px 70px 22px;
+    }
+}
+
+.get-started {
+    text-align: center;
+    margin-bottom: 190px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        right: -201px;
+        top: 235px;
+        width: 603px;
+        height: 648px;
+        background-image: url(../images/bg/Ellipse\ 5.png);
+        border-radius: 648px;
+        background: #8D8DDA;
+        filter: blur(153px);
+    }
+    &__inner {
+        background: linear-gradient(282.73deg, #52B3AC -13.18%, #302963 99.31%);
+        border-radius: 49px;
+    }
+
+    &__subtitle {
+        color: #000;
+        text-align: center;
+        @extend %outfit-600;
+        font-size: 18px;
+        line-height: 43px;
+        letter-spacing: 4.68px;
+        text-transform: uppercase;
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+
+    &__title {
+        color: #FFFBFB;
+        text-align: center;
+        @extend %outfit-700;
+        font-size: 57px;
+        line-height: 65px;
+        letter-spacing: -1.14px;
+        text-transform: capitalize;
+        padding-bottom: 25px;
+    }
+
+    &__button {
+        color: #FFF;
+        text-align: center;
+        @extend %outfit-700;
+        font-size: 32px;
+        line-height: 43px;
+        letter-spacing: 8.32px;
+        text-transform: uppercase;
+        border-radius: 43px;
+        background: #000;
+        border: none;
+        margin-bottom: 85px;
+        padding-left: auto;
+        padding-right: auto;
+        width: 536px;
+        height: 89px;
+        cursor: pointer;
+    }
+}
+
+.footer {
+    margin-bottom: 130px;
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 150px;
+    }
+
+    &__item {
+        color: #FFFCFC;
+    }
+
+    &__logo {
+        font-size: 22px;
+        color: #FFFCFC;
+    }
+
+    &__link a {
+        color: #FFFCFC;
+        @extend %outfit-600;
+        font-size: 16px;
+        line-height: 31px;
+    }
+
+    h6.footer__title {
+        font-size: 22px;
+        margin-bottom: 38px;
+    }
+
+    &__form {
+        border-radius: 28px;
+        background: #252155;
+        max-width: 350px;
+        width: 100%;
+        margin-right: 3px;
+        border: none;
+        padding: 12px 10px 12px 15px;
+    }
+
+    &__form-input {
+        background-color: #252155;
+        color: #FFFCFC;
+        @extend %outfit-600;
+        font-size: 16px;
+        border: none;
+        &::placeholder {
+            color: #FFFCFC;
+            @extend %outfit-600;
+            font-size: 16px;
+        }
+    }
+
+    &__form-btn {
+        border-radius: 28px;
+        background-color: #52B2AC;
+        border: none;
+        padding: 4px 20px;
+        color: #FFFCFC;
+        @extend %outfit-600;
+        font-size: 14px;
+    }
+
+    &__bottom {
+        background: linear-gradient(283deg, #52B2AC -13.18%, #302963 99.31%);
+        width: 100%;
+        height: 27px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
     }
 
 }
